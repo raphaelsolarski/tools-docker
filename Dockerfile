@@ -18,6 +18,7 @@ RUN apt update && apt install -y software-properties-common \
     python3 \
     python3-pip \
     sudo \
+    tig \
     vim \
     zsh \
     && rm -rf /var/lib/apt/lists/*
