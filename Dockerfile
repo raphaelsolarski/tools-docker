@@ -19,6 +19,7 @@ RUN apt update && apt install -y software-properties-common \
     python3-pip \
     sudo \
     vim \
+    zsh \
     && rm -rf /var/lib/apt/lists/*
 
 RUN useradd -ms /bin/fish tools-docker
