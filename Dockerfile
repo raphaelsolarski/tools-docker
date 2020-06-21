@@ -16,7 +16,7 @@ RUN apt update && apt install -y software-properties-common \
     iputils-ping \
     maven \
     man \
-    manpages-posix
+    manpages-posix \
     net-tools \
     netcat \
     openjdk-11-jdk \
@@ -29,7 +29,7 @@ RUN apt update && apt install -y software-properties-common \
     vim \
     zsh \
     && rm -rf /var/lib/apt/lists/*
-
+RUN yes | unminimize
 RUN useradd -ms /bin/fish tools-docker
 VOLUME /home/tools-docker
 
