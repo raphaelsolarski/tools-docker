@@ -34,7 +34,6 @@ RUN apt update && apt install -y software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 RUN yes | unminimize
 RUN useradd -ms /bin/fish tools-docker
-#VOLUME /home/tools-docker
 
 USER tools-docker
 RUN curl -s "https://get.sdkman.io" | bash
