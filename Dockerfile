@@ -14,6 +14,7 @@ RUN apt update && apt install -y software-properties-common \
     git \
     httpie \
     iputils-ping \
+    lsof \
     maven \
     man \
     manpages-posix \
@@ -26,14 +27,18 @@ RUN apt update && apt install -y software-properties-common \
     sudo \
     strace \
     tig \
+    unzip \
     vim \
+    zip \
     zsh \
     && rm -rf /var/lib/apt/lists/*
 RUN yes | unminimize
 RUN useradd -ms /bin/fish tools-docker
-VOLUME /home/tools-docker
+#VOLUME /home/tools-docker
 
 USER tools-docker
+RUN curl -s "https://get.sdkman.io" | bash
+
 WORKDIR /home/tools-docker
 
 CMD tail -f /dev/null
