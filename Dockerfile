@@ -28,6 +28,7 @@ RUN apt update && apt install -y software-properties-common \
     strace \
     tig \
     unzip \
+    wget \
     vim \
     zip \
     zsh \
