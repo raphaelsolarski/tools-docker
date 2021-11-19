@@ -9,6 +9,7 @@ RUN apt update && apt install -y software-properties-common \
     curl \
     fd-find \
     git \
+    htop \
     httpie \
     iproute2 \
     iputils-ping \
